@@ -6,10 +6,8 @@
     <title>Etiquetas HTML com.102</title>
 </head>
 
-
-<!-- Aspecto visual -->
+<!-- Estilo de esta bella página -->
 <style>
-
 /* Estilos generales para la tabla */
 table {
     width: 100%;
@@ -35,39 +33,19 @@ th, td {
     border-bottom: 1px solid #e0e0e0;
 }
 
-/* Efecto Hover al pasar el mouse #f1f3f5*/
+/* Efecto Hover al pasar el mouse: antes = #f1f3f5*/
 tbody tr:hover {
     background-color: #c302d9;
     transition: background-color 0.2s ease;
 }
 
-/* Estilo específico para la columna de numeración 
-td:first-child {
-    font-weight: bold;
-    color: #495057;
-    text-align: center;
-    width: 50px;
-}*/
-
-
-/* Responsividad para pantallas pequeñas */
 @media (max-width: 768px) {
     table {
         display: block;
-        overflow-x: auto; /* Permite scroll horizontal si la pantalla es muy chica */
+        overflow-x: auto; 
         white-space: normal;
     }
 }
-
-
-
-
-
-
-
-
-
-
 
 body {
     font-family: Arial, sans-serif;
@@ -82,9 +60,8 @@ body {
 
 h1 {
     color: white; 
-    display: inline-block; /* Necesario para que la transformación scale funcione correctamente */
+    display: inline-block;
     animation: changeU 1s ease-in-out infinite alternate; 
-    /* Nombre de la animación, duración de 4 segundos para que sea más lenta 'ease-in-out' para suavizar el inicio/final, e 'infinite' para que no pare */          
 }
 
 table {
@@ -112,10 +89,8 @@ tr:nth-child(even) {
 
 @keyframes changeU {
             0% {
-                color: red;
-                /*font-size: 20px;*/
-                transform: scale(1);     
-</tr> /* Tamaño original  */
+                color: red; /*font-size: 20px;*/
+                transform: scale(1);     /* Tamaño original  */
             }
             25% {
                 color: blue;
@@ -135,58 +110,9 @@ tr:nth-child(even) {
                 transform: scale(1.8);   /*   font-size: 20px; */
             }
         }
-/*
-<!-- Simply a structure
-            <tr>
-                <td>0.0</td>
-                <td>&lt; ? &gt;</td>
-                <td> ? ? ? . </td>
-                <td><code>&lt;?&gt;</code></td>
-                <td>? ? ? ? .</td>
-            </tr>
-            <tr>
-                <td>0.1</td>
-                <td>&lt; ? &gt;</td>
-                <td> ? ? ? . </td>
-                <td><code>&lt;?&gt;</code></td>
-                <td>? ? ? ? .</td>
-            </tr> --> 
-*/
 </style>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- Resto de la estructura -->
+    
+<!-- Resto de la página -->
 <body>
     <div class="incentre-element">
         <h1>102 Etiquetas HTML</h1>
