@@ -6,9 +6,8 @@ session_start();
 $dbFile = 'database.sqlite';
 
 try {
-    // Conexión a SQLite (crea el archivo si no existe)
+    // Conexión a SQLite
     $pdo = new PDO('sqlite:' . $dbFile);
-	//$db = new PDO('sqlite:/tmp/database.sqlite');
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     // Crear tablas iniciales si no existen
@@ -29,7 +28,7 @@ try {
         );
     ");
 
-    // Crear un usuario por defecto si no existe (Predet.: > Usuario: admin, Contraseña: 123456)
+    // Esto crea un usuario por defecto si no existe (Predet.: > Usuario: admin, Contraseña: 123456)
     $stmt = $pdo->prepare("SELECT COUNT(*) FROM usuarios WHERE username = 'Marlenys'");
     $stmt->execute();
     if ($stmt->fetchColumn() == 0) {
@@ -94,7 +93,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['guardar_formulario'])
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INF5170 - Proyecto Integrador</title>
+    <title>Menú Priincipal</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
           /* ==========================================
@@ -244,6 +243,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['guardar_formulario'])
             border-radius: 8px;
             font-size: 1rem;
             outline: none;
+			background-color: var(--bg-color);
             transition: border-color 0.2s, box-shadow 0.2s;
         }
 
@@ -464,7 +464,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['guardar_formulario'])
 
             <!-- VISTA 4: ENLACES A OTROS EJERCICIOS -->
             <?php elseif (isset($_SESSION['user_id']) && $accion === 'ejercicios'): ?>
-                <h2>Canales Disponibles</h2>
+                <h2>Sitios Disponibles</h2>
                 <a href="?action=menu" class="link-back">&larr; Volver al Menú</a>
                 
                 <ul class="list-disc list-inside space-y-2 text-gray-700">
