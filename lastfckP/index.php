@@ -8,7 +8,7 @@ $dbFile = 'database.sqlite';
 try {
     // Conexión a SQLite (crea el archivo si no existe)
     //$pdo = new PDO('sqlite:' . $dbFile);
-	 $pdo = new PDO('sqlite:' . _DIR_ . '/db/database.sqlite');
+	 $pdo = new PDO('sqlite:' . '/db/database.sqlite');
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     // Crear tablas iniciales si no existen
