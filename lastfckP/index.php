@@ -93,7 +93,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['guardar_formulario'])
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menú Priincipal</title>
+    <title>Menú Prinshipal</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
           /* ==========================================
@@ -335,7 +335,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['guardar_formulario'])
            ================================---------- */
         .alert {
             background-color: var(--bg-color);
-            color: #1e40af;
+            color: var(--primary-color);
             padding: 0.75rem;
             border-radius: 8px;
             margin-bottom: 1.25rem;
