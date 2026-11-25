@@ -334,7 +334,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['guardar_formulario'])
            UTILIDADES Y MENSAJES
            ================================---------- */
         .alert {
-            background-color: #dbeafe;
+            background-color: var(--bg-color);
             color: #1e40af;
             padding: 0.75rem;
             border-radius: 8px;
